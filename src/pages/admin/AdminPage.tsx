@@ -1,5 +1,7 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { useState } from 'react';
+import style from './AdminPage.module.css'
+import {Layout, Menu, Breadcrumb, Image} from 'antd';
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -7,26 +9,29 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+import logo from "../../images/logo_sider.png";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-export class AdminPage extends React.Component {
-  state = {
-    collapsed: false,
+export const AdminPage = () => {
+  const [state, setState] = useState(false)
+
+  const handleCollapse = () => {
+    setState(!state);
   };
 
-  onCollapse = (collapsed: any) => {
-    console.log(collapsed);
-    this.setState({ collapsed });
-  };
-
-  render() {
-    const { collapsed } = this.state;
     return (
       <Layout style={{ minHeight: '100vh' }}>
-        <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
-          <div className="logo" />
+        <Sider collapsible collapsed={state} onCollapse={handleCollapse}>
+          <div className={style.logoContainer}>
+            <Image
+              width={150}
+              src={logo}
+              preview={false}
+              alt="more bread logo"
+            />
+          </div>
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" icon={<PieChartOutlined />}>
               Option 1
@@ -64,4 +69,3 @@ export class AdminPage extends React.Component {
       </Layout>
     );
   }
-}

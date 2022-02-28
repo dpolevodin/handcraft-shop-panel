@@ -1,4 +1,5 @@
-import { createStore } from "effector";
+import {createEvent, createStore} from "effector";
+import { LoginCheck } from "../../interfaces";
 export * from './admin/index'
 export * from './user/index'
 
@@ -17,3 +18,8 @@ export const $users = createStore([
     "password": "user3"
   },
 ])
+
+export const setCurrentUser = createEvent<string>();
+
+export const $currentUser = createStore('')
+  .on(setCurrentUser, (state, user) => user)

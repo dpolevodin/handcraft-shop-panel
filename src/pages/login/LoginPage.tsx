@@ -6,7 +6,7 @@ import { checkIsAdmin, checkUserInDB } from '../../utils/index';
 import { LoginCheck } from '../../interfaces';
 import { useNavigate } from 'react-router-dom'
 import { useStore } from 'effector-react'
-import { $users, $isAdminRole } from '../../store/users/index'
+import {$users, setCurrentUser} from '../../store/users/index'
 
 const { Title } = Typography;
 
@@ -20,6 +20,7 @@ export const LoginPage = () => {
       navigate('/admin')
     }
     if (checkUserInDB(users, {...values})) {
+      setCurrentUser(values.username)
       navigate('/user')
     }
     setIsError(true);
@@ -34,12 +35,12 @@ export const LoginPage = () => {
       <Space direction="vertical" align="center" size="large" >
         <div className={style.logoContainer}>
           <Image
-            width={100}
+            width={250}
             src={logo}
             preview={false}
             alt="more bread logo"
           />
-          <Title level={3}>Больше хлеба</Title>
+          <Title level={1}></Title>
         </div>
         {isError && <Alert message="Неправильный логин или пароль" type="error" />}
         <Form
