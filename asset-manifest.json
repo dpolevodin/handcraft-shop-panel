@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/handcraft-shop-panel/static/css/main.776fdb7d.css",
+    "main.js": "/handcraft-shop-panel/static/js/main.5116d737.js",
+    "static/media/logo_main.png": "/handcraft-shop-panel/static/media/logo_main.ab4b8bb37819b2d0436b.png",
+    "static/media/logo_sider.png": "/handcraft-shop-panel/static/media/logo_sider.fb08f4a56bf6bcf9450d.png",
+    "index.html": "/handcraft-shop-panel/index.html",
+    "main.776fdb7d.css.map": "/handcraft-shop-panel/static/css/main.776fdb7d.css.map",
+    "main.5116d737.js.map": "/handcraft-shop-panel/static/js/main.5116d737.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.776fdb7d.css",
+    "static/js/main.5116d737.js"
+  ]
+}
