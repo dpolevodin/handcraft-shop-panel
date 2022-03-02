@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-react-charts": "^5.0.1",
+    "@progress/kendo-theme-default": "^5.2.0",
+    "@progress/kendo-theme-material": "^5.2.0",
     "@testing-library/dom": "^7.31.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^10.4.9",
@@ -16,6 +19,7 @@
     "effector": "^21.8.12",
     "effector-react": "^21.3.3",
     "gh-pages": "^3.2.3",
+    "hammerjs": "^2.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",

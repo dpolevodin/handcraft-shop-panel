@@ -1,4 +1,5 @@
 import React from 'react';
+import '@progress/kendo-theme-default/dist/all.css';
 import { Routes, Route } from "react-router-dom";
 import { LoginPage, AdminPage, UserPage } from "./pages/";
 

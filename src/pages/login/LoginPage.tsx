@@ -7,6 +7,7 @@ import { LoginCheck } from '../../interfaces';
 import { useNavigate } from 'react-router-dom'
 import { useStore } from 'effector-react'
 import {$users, setCurrentUser} from '../../store/users/index'
+import {DonutChart} from "../../components/charts";
 
 const { Title } = Typography;
 

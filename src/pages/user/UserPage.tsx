@@ -10,8 +10,10 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+import { DonutChart } from '../../components/charts/index'
 import logo from "../../images/logo_sider.png";
 import {$currentUser} from "../../store/users";
+import {BarChart} from "../../components/charts/bar/BarChart";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -64,8 +66,9 @@ export const UserPage = () => {
             <Breadcrumb.Item>User</Breadcrumb.Item>
             <Breadcrumb.Item>{currentUser}</Breadcrumb.Item>
           </Breadcrumb>
-          <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+          <div className="site-layout-background" style={{ padding: 24, minHeight: 360, width: 1600, height: 6000 }}>
             {currentUser ? `Привет, ${currentUser}` : `Необходимо авторизоваться`}
+            <BarChart/>
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Больше хлеба ©2022</Footer>

@@ -1,5 +1,4 @@
 import {createEvent, createStore} from "effector";
-import { LoginCheck } from "../../interfaces";
 export * from './admin/index'
 export * from './user/index'
 
